@@ -14,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
+    -- git
+    'tpope/vim-fugitive',
+    
     -- auto indentation
     --'tpope/vim-sleuth',
 
@@ -21,7 +24,7 @@ require("lazy").setup({
         'olimorris/onedarkpro.nvim',
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme 'onelight'
+            vim.cmd.colorscheme 'onedark'
         end
     },
 
@@ -50,6 +53,15 @@ require("lazy").setup({
         cond = function()
             return vim.fn.executable 'make' == 1
         end,
+    },
+
+    {
+        'nvim-treesitter/nvim-treesitter',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter-textobjects',
+        },
+        build = ':TSUpdate',
+        config = function() require("plugins.treesitter") end
     },
 })
 
