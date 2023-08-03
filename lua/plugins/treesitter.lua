@@ -24,7 +24,7 @@ Supported options for cpp:
 
 require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'lua', 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
+    ensure_installed = { 'lua', 'c', 'cpp', 'lua', 'python', 'vimdoc', 'vim' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = true,
@@ -86,3 +86,5 @@ require('nvim-treesitter.configs').setup {
         },
     }
 }
+
+require("nvim-dap-virtual-text").setup()
