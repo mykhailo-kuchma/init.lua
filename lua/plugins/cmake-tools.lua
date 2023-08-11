@@ -8,3 +8,4 @@ require("cmake-tools").setup {
         console = "integratedTerminal",
     },
 }
+
